@@ -71,7 +71,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
               font-size: 10px;
             }
             &:hover{
-              color: #dacf5a;
+              color: #fff200;
             }
             &:hover .level-nav-second{
               display: block;
@@ -89,24 +89,52 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 }
 .banner__block{
   width: 100%;
-  .slider__item{
-    div{
-      &:before{
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: linear-gradient(100deg, $gradient_start, $gradient_end);
+  .slider{
+    .head__title{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      width: 850px;
+      max-width: 100%;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        font:64px $lato-font-stack;
+        font-weight: bold;
+        line-height: 0.55;
+        span{
+          color: #dacf5a;
+        }
+      }
+      p{
+        font-family: $lato-font-stack;
+        text-align: center;
       }
     }
-    .slider__img{
-      max-width: 100%;
+    .slider__item{
+      div{
+        &:before{
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(100deg, $gradient_start, $gradient_end);
+        }
+      }
+      .slider__img{
+        max-width: 100%;
+        width: 100%;
+      }
 
     }
-
   }
+
 }
 
 
