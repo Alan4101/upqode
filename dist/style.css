@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);@font-face {
+  font-family: "Beyno";
+  src: url("/fonts/beyno/BEYNO.ttf") format("truetype"); }
+
+.slider {
+  position: relative;
+  overflow: hidden; }
+
+.slider__wrapper {
+  display: flex;
+  transition: transform 0.6s ease; }
+
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+@media (min-width: 980px) {
+  .slider__item {
+    flex: 0 0 50%;
+    max-width: 50%; } }
+
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); }
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9; }
+
+.slider__control_left {
+  left: 0; }
+
+.slider__control_right {
+  right: 0; }
+
+.slider__control::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%; }
+
+.slider__control_left::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+.slider__control_right::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+
+.slider__item > div {
+  line-height: 250px;
+  font-size: 100px;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.main__header .main__nav {
+  display: flex; }
+
+.main__header .main__nav .nav__items .nav__item .dropdown__nav, .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item .level-nav-second {
+  position: absolute;
+  list-style-type: none;
+  width: 184px;
+  border-top: 5px solid #dacf5a;
+  display: none; }
+
+/*header*/
+.main__header {
+  width: 100%;
+  min-width: 320px;
+  display: flex; }
+  .main__header .main__nav {
+    height: 70px;
+    justify-content: space-between;
+    align-items: center; }
+    .main__header .main__nav .block__logo {
+      text-transform: uppercase;
+      font: 24px Beyno;
+      color: #503392;
+      font-weight: bold; }
+      .main__header .main__nav .block__logo span {
+        color: #009dda; }
+    .main__header .main__nav .nav__items {
+      list-style-type: none;
+      margin-bottom: 0; }
+      .main__header .main__nav .nav__items .nav__item {
+        display: inline-flex;
+        margin: 1em; }
+        .main__header .main__nav .nav__items .nav__item .nav__link {
+          text-decoration: none;
+          font: 100% "Lato", sans-serif;
+          color: #000; }
+          .main__header .main__nav .nav__items .nav__item .nav__link:hover {
+            font-weight: bold; }
+        .main__header .main__nav .nav__items .nav__item:hover .dropdown__nav {
+          display: block; }
+        .main__header .main__nav .nav__items .nav__item .dropdown__nav {
+          top: 2.3em;
+          background: rgba(44, 30, 65, 0.8); }
+          .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item {
+            padding: 1em 2em;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(44, 30, 65, 0.8);
+            font: 14px "Lato", sans-serif; }
+            .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item .fas {
+              font-size: 10px; }
+            .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item:hover {
+              color: #dacf5a; }
+            .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item:hover .level-nav-second {
+              display: block; }
+            .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item .level-nav-second {
+              margin-top: -35px;
+              left: 184px; }
