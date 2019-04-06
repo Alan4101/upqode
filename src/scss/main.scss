@@ -12,6 +12,11 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 %flex-1{
   display: flex;
 }
+%flex-2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 %nav-parameter{
   position: absolute;
   list-style-type: none;
@@ -48,6 +53,8 @@ $gradient_start : rgba(0, 193, 243, 0.8);
           text-decoration: none;
           font: 100% $lato-font-stack;
           color: #000;
+          letter-spacing: 0.04em;
+          line-height: 24px;
           &:hover{
             font-weight: bold;
           }
@@ -105,14 +112,16 @@ $gradient_start : rgba(0, 193, 243, 0.8);
         color: #ffffff;
         font:64px $lato-font-stack;
         font-weight: bold;
-        line-height: 0.55;
+        letter-spacing: 0.055em;
         span{
           color: #dacf5a;
         }
       }
       p{
+        padding-top: 3em;
         font-family: $lato-font-stack;
         text-align: center;
+        letter-spacing: 0.04em;
       }
     }
     .slider__item{
@@ -134,8 +143,26 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 
     }
   }
-
 }
+.choose__block{
+  width: 100%;
+  text-align: center;
+  margin: 100px 0;
+  .title__head{
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: black;
+    .color-blue{
+      color: #009dda;
+    }
+  }
+  .head__caption{
+    letter-spacing: 0.055em;
+    font: 14px $lato-font-stack;
+    color: #bababa;
+  }
+}
+
 
 
 

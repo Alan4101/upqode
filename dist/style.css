@@ -108,7 +108,9 @@
         .main__header .main__nav .nav__items .nav__item .nav__link {
           text-decoration: none;
           font: 100% "Lato", sans-serif;
-          color: #000; }
+          color: #000;
+          letter-spacing: 0.04em;
+          line-height: 24px; }
           .main__header .main__nav .nav__items .nav__item .nav__link:hover {
             font-weight: bold; }
         .main__header .main__nav .nav__items .nav__item:hover .dropdown__nav {
@@ -150,12 +152,14 @@
       color: #ffffff;
       font: 64px "Lato", sans-serif;
       font-weight: bold;
-      line-height: 0.55; }
+      letter-spacing: 0.055em; }
       .banner__block .slider .head__title h1 span {
         color: #dacf5a; }
     .banner__block .slider .head__title p {
+      padding-top: 3em;
       font-family: "Lato", sans-serif;
-      text-align: center; }
+      text-align: center;
+      letter-spacing: 0.04em; }
   .banner__block .slider .slider__item div:before {
     position: absolute;
     content: "";
@@ -167,3 +171,18 @@
   .banner__block .slider .slider__item .slider__img {
     max-width: 100%;
     width: 100%; }
+
+.choose__block {
+  width: 100%;
+  text-align: center;
+  margin: 100px 0; }
+  .choose__block .title__head {
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: black; }
+    .choose__block .title__head .color-blue {
+      color: #009dda; }
+  .choose__block .head__caption {
+    letter-spacing: 0.055em;
+    font: 14px "Lato", sans-serif;
+    color: #bababa; }
