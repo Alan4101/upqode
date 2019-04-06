@@ -73,8 +73,13 @@
   margin: 0;
   padding: 0; }
 
-.main__header .main__nav {
+.main__header .main__nav, .choose__block .row .advantages__block .advantage__item {
   display: flex; }
+
+.choose__block .row .advantages__block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
 
 .main__header .main__nav .nav__items .nav__item .dropdown__nav, .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item .level-nav-second {
   position: absolute;
@@ -82,6 +87,11 @@
   width: 184px;
   border-top: 5px solid #dacf5a;
   display: none; }
+
+.choose__block .row .title__head {
+  font: 35px "Lato", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 /*header*/
 .main__header {
@@ -173,16 +183,87 @@
     width: 100%; }
 
 .choose__block {
-  width: 100%;
-  text-align: center;
-  margin: 100px 0; }
-  .choose__block .title__head {
-    padding: 10px 0;
-    text-transform: uppercase;
-    color: black; }
-    .choose__block .title__head .color-blue {
-      color: #009dda; }
-  .choose__block .head__caption {
-    letter-spacing: 0.055em;
-    font: 14px "Lato", sans-serif;
-    color: #bababa; }
+  margin: 100px auto 100px;
+  width: 100%; }
+  .choose__block .row {
+    flex-direction: column;
+    text-align: center; }
+    .choose__block .row .title__head {
+      padding: 5px 0;
+      color: black;
+      margin: 0 auto; }
+      .choose__block .row .title__head .color-blue {
+        color: #009dda; }
+    .choose__block .row .head__caption {
+      letter-spacing: 0.04em;
+      line-height: 24px;
+      font: 14px "Lato", sans-serif;
+      color: #bababa;
+      width: 700px;
+      max-width: 100%;
+      margin: 0 auto 30px;
+      padding: 30px 0; }
+    .choose__block .row .advantages__block {
+      margin: 30px 0 20px; }
+      .choose__block .row .advantages__block .advantage__item {
+        flex-direction: column;
+        margin: 0 14px;
+        border: 1px solid #bababa;
+        width: 200px;
+        max-width: 100%;
+        height: 270px; }
+        .choose__block .row .advantages__block .advantage__item .item-icon {
+          color: #503392;
+          font-size: 60px;
+          margin: 16px 0; }
+          .choose__block .row .advantages__block .advantage__item .item-icon i {
+            letter-spacing: 0.04em;
+            line-height: 24px; }
+        .choose__block .row .advantages__block .advantage__item .item-content-text {
+          font: 14px "Lato", sans-serif;
+          text-align: center;
+          height: 150px; }
+          .choose__block .row .advantages__block .advantage__item .item-content-text h5 {
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 60px; }
+          .choose__block .row .advantages__block .advantage__item .item-content-text p {
+            margin: 0 auto;
+            text-align: center;
+            width: 160px;
+            letter-spacing: 0.04em;
+            line-height: 20px;
+            color: #bababa; }
+        .choose__block .row .advantages__block .advantage__item .item-content {
+          display: none;
+          width: 100%;
+          height: 150px;
+          text-align: center; }
+          .choose__block .row .advantages__block .advantage__item .item-content p {
+            text-transform: uppercase;
+            font: 14px "Lato", sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            line-height: 60px;
+            color: #fff; }
+          .choose__block .row .advantages__block .advantage__item .item-content .item-btn__wrapp .button-adv {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            color: #ffffff;
+            background: #503392;
+            padding: 4px; }
+            .choose__block .row .advantages__block .advantage__item .item-content .item-btn__wrapp .button-adv:hover, .choose__block .row .advantages__block .advantage__item .item-content .item-btn__wrapp .button-adv:active {
+              background: #ffffff;
+              color: #503392; }
+          .choose__block .row .advantages__block .advantage__item .item-content .item-btn__wrapp .button-adv:first-child {
+            transform: rotate(90deg); }
+        .choose__block .row .advantages__block .advantage__item:hover .item-content-text {
+          display: none; }
+        .choose__block .row .advantages__block .advantage__item:hover .item-content {
+          display: block;
+          background: #503392; }
