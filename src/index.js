@@ -3,13 +3,12 @@ import './scss/main.scss';
 import './js/slider';
 // import _ from 'lodash';
 
+
 (function() {
-    // let navigatioHover = e =>{
-    //
-    // };
-    // document.querySelector()
-    let obj = document.querySelector('.slider');
-    let o = obj.getBoundingClientRect();
-    // console.log(o.width);
-    // console.log(__dirname+'src/fonts/beyno');
+    let progress =  document.querySelectorAll('progress');
+    let percent = [79, 90, 69, 92];
+
+    for( let i =0; i < progress.length; i++){
+        progress[i].value = percent[i];
+    }
 })();

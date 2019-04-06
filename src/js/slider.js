@@ -247,5 +247,5 @@ var multiItemSlider = (function () {
 
 var slider = multiItemSlider('.slider', {
     isCycling: true,
-    interval: 3000
+    // interval: 3000
 });

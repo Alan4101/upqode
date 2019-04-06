@@ -1,5 +1,6 @@
 @import "font";
 @import "slider";
+@import "progress";
 
 $lato-font-stack: 'Lato', sans-serif;
 $gradient_end : rgba(80, 51, 146, 0.7);
@@ -29,6 +30,24 @@ $gradient_start : rgba(0, 193, 243, 0.8);
   font-weight: bold;
   text-transform: uppercase;
 }
+%subtitle{
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  font: 14px $lato-font-stack;
+  color: #bababa;
+  max-width: 100%;
+}
+/*H2 - STYLE */
+.title__head{
+  padding: 5px 0;
+  color: black;
+  margin: 0 auto;
+  @extend %header__title_h;
+  .color-blue{
+    color: #009dda;
+  }
+}
+
 /*header*/
 .main__header{
   width: 100%;
@@ -99,6 +118,8 @@ $gradient_start : rgba(0, 193, 243, 0.8);
     }
   }
 }
+
+/*banner block*/
 .banner__block{
   width: 100%;
   .slider{
@@ -149,31 +170,20 @@ $gradient_start : rgba(0, 193, 243, 0.8);
     }
   }
 }
+
+/*WHY CHOOSE US*/
 .choose__block{
   margin: 100px auto 100px;
   width: 100%;
-  .row{
+  .choose__block_wrapper{
     flex-direction: column;
     text-align: center;
-    .title__head{
-      padding: 5px 0;
-      color: black;
-      margin: 0 auto;
-      @extend %header__title_h;
-      .color-blue{
-        color: #009dda;
-      }
-    }
+
     .head__caption{
-      letter-spacing: 0.04em;
-      line-height: 24px;
-      font: 14px $lato-font-stack;
-      color: #bababa;
       width: 700px;
-      max-width: 100%;
       margin: 0 auto 30px;
       padding: 30px 0;
-
+      @extend %subtitle;
     }
     .advantages__block{
       margin: 30px 0 20px;
@@ -261,10 +271,232 @@ $gradient_start : rgba(0, 193, 243, 0.8);
       }
     }
   }
-
 }
 
+/*ABOUT BLOCK*/
+.about__block{
+  width: 100%;
+  .item__about-block{
 
+    .title__head{
+      padding-bottom: 0;
+      margin-bottom: 35px;
+    }
+
+    .about__head_caption{
+      margin-bottom: 50px;
+      @extend %subtitle;
+    }
+
+    .about__content_text{
+      margin-bottom: 50px;
+      @extend %subtitle;
+      color: #000;
+    }
+
+    .skills__container{
+      margin-left: 10px;
+      .contain__skill{
+        .progress__block{
+          margin: 20px 0 30px;
+        }
+        .skill__name{
+          font: 13px $lato-font-stack;
+          font-weight: bold;
+          text-transform: uppercase;
+
+            span:first-child{
+              float: left;
+            }
+          span:last-child{
+            float: right;
+          }
+        }
+
+      }
+    }
+
+    .about_figure{
+      text-align: right;
+      img{
+        margin: 0 auto;
+        max-width: 100%;
+        height: 500px;
+        max-height: 100%;
+      }
+    }
+
+  }
+  .item__about-block:last-child{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+
+  }
+}
+
+%flex-3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*contact block*/
+.contacts__block{
+  width: 100%;
+
+  .contact__wrapper{
+    position: relative;
+    iframe{
+        height: 635px;
+      }
+
+    .contact__form_block{
+      @extend %flex-3;
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 641px;
+      max-height: 100%;
+      background: rgba(0,0,0, 0.5);
+      .wrapper__form{
+        @extend %flex-3;
+        margin: 0 auto;
+        width: 945px;
+        max-width: 100%;
+        background: rgba(0,0,0, 0.5);
+        height: 435px;
+        max-height: 100%;
+        .form{
+          width: 70%;
+          max-width: 100%;
+          .send__message{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+            .form__group{
+              margin: 15px 0;
+              p{
+                float: left;
+                color: #e7e7e7;
+              }
+              .submit__button{
+                float: right;
+              }
+            }
+            .control-btn{
+              width: 70%;
+            }
+            .form__input, .form__checkbox, .form__text{
+              background: transparent;
+              border: 1px solid #bababa;
+              color: #e7e7e7;
+              outline: none;
+            }
+            .form__input{
+              width: 238px;
+              max-width: 100%;
+              padding: 15px;
+              margin: 5px 10px;
+              line-height: 24px;
+              font: 16px $lato-font-stack;
+            }
+            .form__text{
+              width: 495px;
+              max-width: 100%;
+              height: 145px;
+              max-height: 100%;
+            }
+            .form__checkbox{
+              background: transparent;
+            }
+            .submit__button{
+              width: 120px;
+              height: 50px;
+              background: #ffff00;
+            }
+          }
+
+        }
+        .text__contact{
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  /*main footer*/
+  .main__footer{
+    position: relative;
+    background: #000;
+    color: #bababa;
+    height: 64px;
+    display: flex;
+    align-items: center;
+
+    .footer__content{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      justify-content: space-between;
+      padding-right: 30px;
+      padding-left: 30px;
+      @extend %flex-2;
+
+      .footer__text{
+        margin-top: 35px;
+        line-height: 42px;
+        letter-spacing: 0.025em;
+        font: 16px $lato-font-stack;
+        color: #9c9c9c;
+      }
+      .social__network_items{
+        margin-top: 16px;
+        list-style-type: none;
+        display: inline-flex;
+
+        .social__item {
+          margin: 10px;
+          .social__link{
+            font-size: 20px;
+          }
+        }
+          .social__item:first-child .social__link{
+            color: #5a709e;
+            &:hover{
+              color: #324663;
+            }
+          }
+          .social__item:nth-child(2) .social__link{
+            color: #e86b53;
+            &:hover{ color: #a75341;}
+          }
+          .social__item:nth-child(3).social__link{
+            color: #71d6fa;
+            &:hover{
+              color: #5288a6;
+            }
+          }
+          .social__item:nth-child(4) .social__link{
+            color: #fb80a9;
+            &:hover{
+              color: #7a3d52;
+            }
+          }
+
+      }
+    }
+
+
+  }
+}
+
+/**/
 
 
 
