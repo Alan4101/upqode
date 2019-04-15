@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900);@font-face {
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);@font-face {
   font-family: "Beyno"; }
 
 .slider {
@@ -456,6 +456,11 @@
   flex-wrap: wrap;
   flex-direction: row; }
 
+.contacts__block .contact__wrapper .contact__form_block, .contacts__block .contact__wrapper .contact__form_block .wrapper__form {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .main__header .main__nav .nav__items .nav__item .dropdown__nav, .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item .level-nav-second {
   position: absolute;
   list-style-type: none;
@@ -494,7 +499,7 @@
     align-items: center; }
     .main__header .main__nav .block__logo {
       text-transform: uppercase;
-      font: 24px Beyno;
+      font: 24px 'Abril Fatface';
       color: #503392;
       font-weight: bold; }
       .main__header .main__nav .block__logo span {
@@ -504,7 +509,8 @@
       margin-bottom: 0; }
       .main__header .main__nav .nav__items .nav__item {
         display: inline-flex;
-        margin: 1em; }
+        margin: 1em;
+        padding: 1.5em 0; }
         .main__header .main__nav .nav__items .nav__item .nav__link {
           text-decoration: none;
           font: 100% "Lato", sans-serif;
@@ -516,7 +522,7 @@
         .main__header .main__nav .nav__items .nav__item:hover .dropdown__nav {
           display: block; }
         .main__header .main__nav .nav__items .nav__item .dropdown__nav {
-          top: 2.3em;
+          top: 4em;
           background: rgba(44, 30, 65, 0.8);
           z-index: 999; }
           .main__header .main__nav .nav__items .nav__item .dropdown__nav .dropdown-nav__item {
@@ -684,11 +690,6 @@
     justify-content: flex-end;
     align-items: flex-end; }
 
-.contacts__block .contact__wrapper .contact__form_block, .contacts__block .contact__wrapper .contact__form_block .wrapper__form {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 /*contact block*/
 .contacts__block {
   width: 100%;
@@ -802,4 +803,4 @@
           .contacts__block .main__footer .footer__content .social__network_items .social__item:nth-child(4) .social__link:hover {
             color: #7a3d52; }
 
-/**/
+/*response*/

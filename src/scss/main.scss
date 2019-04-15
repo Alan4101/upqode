@@ -18,6 +18,11 @@ $gradient_start : rgba(0, 193, 243, 0.8);
   flex-wrap: wrap;
   flex-direction: row;
 }
+%flex-3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 %nav-parameter{
   position: absolute;
   list-style-type: none;
@@ -60,7 +65,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
     @extend %flex-1;
     .block__logo{
       text-transform: uppercase;
-      font: 24px Beyno;
+      font: 24px 'Abril Fatface';
       color: #503392;
       font-weight: bold;
       span{
@@ -73,6 +78,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
       .nav__item{
         display: inline-flex;
           margin: 1em;
+        padding: 1.5em 0;
         .nav__link{
           text-decoration: none;
           font: 100% $lato-font-stack;
@@ -88,7 +94,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
           display: block;
         }
         .dropdown__nav{
-          top:2.3em;
+          top:4em;
           background: rgba(44,30,65,0.8);
           z-index: 999;
           @extend %nav-parameter;
@@ -336,11 +342,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
   }
 }
 
-%flex-3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /*contact block*/
 .contacts__block{
   width: 100%;
@@ -496,7 +498,10 @@ $gradient_start : rgba(0, 193, 243, 0.8);
   }
 }
 
-/**/
+/*response*/
+//@media () {
+//
+//}
 
 
 
