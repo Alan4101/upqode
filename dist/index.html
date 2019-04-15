@@ -15,7 +15,7 @@
         <div class="block__logo">up<span>qode</span></div>
         <ul class="nav__items">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a class="nav__link">Products</a>
+            <li id="navDownContainer" class="nav__item"><a class="nav__link">Products</a>
                 <ul class="dropdown__nav">
                     <li class="dropdown-nav__item"><i class="fas fa-chevron-right"></i><span class="nav-span__item">Some Text</span>
                         <ul class="level-nav-second">
@@ -35,11 +35,7 @@
                     </li>
                     <li class="dropdown-nav__item"><i class="fas fa-chevron-right"></i><span class="nav-span__item">Some Text</span>
                         <ul class="level-nav-second">
-                            <li class="dropdown-nav__item">
-                                <i class="fas fa-chevron-right"></i>
-                                <i class="fas fa-chevron-right"></i>
-                                <span class="nav-span__item">Some text</span>
-                            </li>
+                            <li class="dropdown-nav__item"><i class="fas fa-chevron-right"></i><span class="nav-span__item">Some text</span></li>
                             <li class="dropdown-nav__item"><i class="fas fa-chevron-right"></i><span class="nav-span__item">Some text</span></li>
                             <li class="dropdown-nav__item"><i class="fas fa-chevron-right"></i><span class="nav-span__item">Some text</span></li>
                         </ul>
@@ -57,7 +53,10 @@
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
         <form action="" class="search-form">
-            <input type="search" class="input" name="search">
+            <label class="search__label">
+                <input type="search" class="input" name="search">
+                <span class="fas fa-search"></span>
+            </label>
         </form>
     </nav>
 </header>
@@ -73,17 +72,17 @@
                     </div>
                     <div class="slider__wrapper">
                         <div class="slider__item">
-                            <div>
+                            <div class="gradient">
                                 <img class="slider__img" src="../src/img/bg.png" alt="bg">
                             </div>
                         </div>
                         <div class="slider__item">
-                            <div>
+                            <div class="gradient">
                                 <img class="slider__img" src="../src/img/bg.png" alt="bg">
                             </div>
                         </div>
                         <div class="slider__item">
-                            <div>
+                            <div class="gradient">
                                 <img class="slider__img" src="../src/img/bg.png" alt="bg">
                             </div>
                         </div>
@@ -262,7 +261,7 @@
         <section id="contact" class="contacts__block">
             <article class="text-center">
                 <h2 class="title__head">get in <span class="color-blue"> touch</span></h2>
-                <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+                <p class="head__caption">Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
                     Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
             </article>
             <div class="contact__wrapper">

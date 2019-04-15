@@ -4,8 +4,7 @@ import './js/slider';
 // import _ from 'lodash';
 
 let d        = document,
-    navList  = d.querySelector('.nav__item'),
-    dropItem = d.querySelectorAll('.dropdown-nav__item');
+    navDown  = d.querySelector('#navDownContainer');
 
 if(!Element.prototype.remove){
     Element.prototype.remove = function remove(){
@@ -15,21 +14,22 @@ if(!Element.prototype.remove){
     }
 }
 
-dropItem.addEventListener('mouseenter', (e)=>{
-    // var el = e.target;
-    // console.log(el);
-    //
-    if(!dropItem.classList.contains('hover')){
-        dropItem.insertAdjacentHTML('afterBegin', `<i class="fas fa-chevron-right"></i>`);
-        dropItem.classList.add('hover');
-    }else {
-        dropItem.children[0].remove();
-        dropItem.classList.remove('hover');
+navDown.addEventListener('mouseover', (e)=>{
+    let el = e.target;
+
+    if(el.classList.contains('dropdown-nav__item') || el.classList.contains('nav-span__item')){
+        el.insertAdjacentHTML('afterBegin', `<i class="fas fa-chevron-right"></i>`);
+        el.classList.add('hover');
     }
 }, false);
 
-dropItem.addEventListener('mouseleave', ()=>{
+navDown.addEventListener('mouseout', e=>{
+    let el = e.target;
 
+    if(el.classList.contains('dropdown-nav__item') && el.classList.contains('hover') || el.classList.contains('nav-span__item')){
+        el.children[0].remove();
+        el.classList.remove('hover');
+    }
 }, false);
 
 (function() {
