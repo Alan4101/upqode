@@ -347,8 +347,17 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 .contacts__block{
   width: 100%;
 
+  .text-center{
+    width: 100%;
+    p{
+      margin: 0 auto;
+      width: 700px;
+      max-width: 100%;
+    }
+  }
   .contact__wrapper{
     position: relative;
+
     iframe{
         height: 635px;
       }
@@ -381,6 +390,9 @@ $gradient_start : rgba(0, 193, 243, 0.8);
             flex-direction: column;
             .form__group{
               margin: 15px 0;
+              &:nth-child(2){
+                margin: 0;
+              }
               p{
                 float: left;
                 color: #e7e7e7;
@@ -390,7 +402,73 @@ $gradient_start : rgba(0, 193, 243, 0.8);
               }
             }
             .control-btn{
-              width: 70%;
+              width: 75%;
+              display: flex;
+              justify-content: space-between;
+
+              .submit__button{
+                width: 120px;
+                height: 50px;
+                background: #ffff00;
+                outline: none;
+                border: none ;
+              }
+              .container__check{
+                display: block;
+                position: relative;
+                cursor: pointer;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                color: #bababa;
+                font: 16px $lato-font-stack;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                input{
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0;
+                }
+                .checkmark {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 22px;
+                  width: 22px;
+                  background-color: rgba(0,0,0, 0.5);
+                  border: 1px solid #bababa;
+                }
+                &:hover input~ .checkmark{
+                  background-color: #ccc;
+                }
+                input:checked ~ .checkmark{
+                  background-color: #474747;
+                }
+                .checkmark:after{
+                  content: "";
+                  position: absolute;
+                  display: none;
+                }
+                input:checked ~.checkmark:after{
+                  display: block;
+                }
+                .checkmark:after{
+                  left: 7px;
+                  top: 3px;
+                  width: 5px;
+                  height: 10px;
+                  border: solid white;
+                  border-width: 0 3px 3px 0;
+                  -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+                }
+              }
+
             }
             .form__input, .form__checkbox, .form__text{
               background: transparent;
@@ -415,16 +493,32 @@ $gradient_start : rgba(0, 193, 243, 0.8);
             .form__checkbox{
               background: transparent;
             }
-            .submit__button{
-              width: 120px;
-              height: 50px;
-              background: #ffff00;
-            }
+
           }
 
         }
         .text__contact{
+          margin-top: -4em;
           width: 30%;
+          .postal__address{
+            color: #fff;
+          }
+          address{
+            margin-bottom: 1.5rem;
+
+            p{
+              font: 16px $lato-font-stack;
+              margin-bottom: 0px;
+              line-height: 24px;
+              letter-spacing: 0;
+
+              a{
+                text-decoration: none;
+                color: #fff !important;
+              }
+            }
+
+          }
         }
       }
     }

@@ -260,9 +260,11 @@
         </section>
         <!--CONTACTS-->
         <section id="contact" class="contacts__block">
-            <h2 class="title__head">get in <span class="color-blue"> touch</span></h2>
-            <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
-                Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+            <article class="text-center">
+                <h2 class="title__head">get in <span class="color-blue"> touch</span></h2>
+                <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+                    Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+            </article>
             <div class="contact__wrapper">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d39755.91197850936!2d-0.10468044303456271!3d51.486726039274714!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760520cd5b5eb5%3A0xa26abf514d902a7!2z0JHRg9C60ZbQvdCz0LXQvNGB0YzQutC40Lkg0L_QsNC70LDRhg!5e0!3m2!1suk!2sua!4v1554571965783!5m2!1suk!2sua" width="100%" height="635" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <div class="contact__form_block">
@@ -277,32 +279,41 @@
                                     <textarea class="form__text" name="message" placeholder="Message" required cols="10" rows="5"></textarea>
                                 </div>
                                 <div class="form__group control-btn">
-                                    <p>
-                                        <input id="checkLike" class="form__checkbox" type="checkbox" name="check">
-                                        <label for="checkLike">I like your company</label>
-                                    </p>
-
+                                    <label class="container__check">
+                                        <input type="checkbox" checked="checked">I like your company
+                                        <span class="checkmark"></span>
+                                    </label>
                                     <button class="submit__button" type="submit">Send</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="text__contact">
-                            <p>69/A, Some Street Name
-                                Your City, code 01234
-                                Country Name</p>
-                            <div>
-                                <ul>
-                                    <li><a href="tel:+8801234567898">+880 123 456 78 98</a></li>
-                                    <li><a href="tel:+8609876487495">+860 987 648 74 95</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li><a href="mailto:company@mail.com">company@mail.com</a></li>
-                                    <li><a href="mailto:sales@mail.com">sales@mail.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <section class="text__contact">
+                            <address class="postal__address" property="address" typeof="PostalAddress">
+                                <p property="streetAddress">69/A, Some Street Name</p>
+                                <p>
+                                    <span property="addressLocality">Your City,</span>
+                                    <span property="postalCode">code 01234</span>
+                                </p>
+                                <p property="addressCountry">Country Name</p>
+                            </address>
+
+                            <address property="telephone">
+                                <p property="tel1">
+                                    <a href="tel:+8801234567898">+880 123 456 78 98</a>
+                                </p>
+                                <p property="tel2">
+                                    <a href="tel:+8609876487495">+860 987 648 74 95</a>
+                                </p>
+                            </address>
+                            <address property="email">
+                                <p property="email1">
+                                    <a href="mailto:company@mail.com">company@mail.com</a>
+                                </p>
+                                <p property="email2">
+                                    <a href="mailto:sales@mail.com">sales@mail.com</a>
+                                </p>
+                            </address>
+                        </section>
                     </div>
                 </div>
             </div>

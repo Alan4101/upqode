@@ -694,6 +694,12 @@
 .contacts__block {
   width: 100%;
   /*main footer*/ }
+  .contacts__block .text-center {
+    width: 100%; }
+    .contacts__block .text-center p {
+      margin: 0 auto;
+      width: 700px;
+      max-width: 100%; }
   .contacts__block .contact__wrapper {
     position: relative; }
     .contacts__block .contact__wrapper iframe {
@@ -724,13 +730,69 @@
             flex-direction: column; }
             .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__group {
               margin: 15px 0; }
+              .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__group:nth-child(2) {
+                margin: 0; }
               .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__group p {
                 float: left;
                 color: #e7e7e7; }
               .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__group .submit__button {
                 float: right; }
             .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn {
-              width: 70%; }
+              width: 75%;
+              display: flex;
+              justify-content: space-between; }
+              .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .submit__button {
+                width: 120px;
+                height: 50px;
+                background: #ffff00;
+                outline: none;
+                border: none; }
+              .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check {
+                display: block;
+                position: relative;
+                cursor: pointer;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                color: #bababa;
+                font: 16px "Lato", sans-serif;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check input {
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check .checkmark {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 22px;
+                  width: 22px;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  border: 1px solid #bababa; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check:hover input ~ .checkmark {
+                  background-color: #ccc; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check input:checked ~ .checkmark {
+                  background-color: #474747; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check .checkmark:after {
+                  content: "";
+                  position: absolute;
+                  display: none; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check input:checked ~ .checkmark:after {
+                  display: block; }
+                .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .control-btn .container__check .checkmark:after {
+                  left: 7px;
+                  top: 3px;
+                  width: 5px;
+                  height: 10px;
+                  border: solid white;
+                  border-width: 0 3px 3px 0;
+                  -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg); }
             .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__input, .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__checkbox, .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__text {
               background: transparent;
               border: 1px solid #bababa;
@@ -750,12 +812,21 @@
               max-height: 100%; }
             .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .form__checkbox {
               background: transparent; }
-            .contacts__block .contact__wrapper .contact__form_block .wrapper__form .form .send__message .submit__button {
-              width: 120px;
-              height: 50px;
-              background: #ffff00; }
         .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact {
+          margin-top: -4em;
           width: 30%; }
+          .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact .postal__address {
+            color: #fff; }
+          .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact address {
+            margin-bottom: 1.5rem; }
+            .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact address p {
+              font: 16px "Lato", sans-serif;
+              margin-bottom: 0px;
+              line-height: 24px;
+              letter-spacing: 0; }
+              .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact address p a {
+                text-decoration: none;
+                color: #fff !important; }
   .contacts__block .main__footer {
     position: relative;
     background: #000;
