@@ -58,7 +58,7 @@
       margin: 5px;
       width: 10px;
       height: 10px;
-      background: #a4a4a4;
+      background: #ffffff;
       border-radius: 50%; }
     .slider .slider__control_list .active_control {
       background: #737373; }
@@ -564,6 +564,13 @@
 /*banner block*/
 .banner__block {
   width: 100%; }
+  .banner__block .slider .slider__control {
+    width: 60px;
+    height: 60px; }
+  .banner__block .slider .slider__control_left {
+    margin-left: 15px; }
+  .banner__block .slider .slider__control_right {
+    margin-right: 15px; }
   .banner__block .slider .head__title {
     position: absolute;
     top: 50%;

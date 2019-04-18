@@ -162,6 +162,16 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 .banner__block{
   width: 100%;
   .slider{
+    .slider__control{
+      width: 60px;
+      height: 60px;
+    }
+    .slider__control_left{
+      margin-left: 15px;
+    }
+    .slider__control_right{
+      margin-right: 15px;
+    }
     .head__title{
       position: absolute;
       top: 50%;
