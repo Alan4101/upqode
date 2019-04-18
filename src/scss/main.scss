@@ -52,6 +52,7 @@ $gradient_start : rgba(0, 193, 243, 0.8);
     color: #009dda;
   }
 }
+
 .head__caption{
   width: 700px;
   margin: 0 auto 30px;
@@ -373,7 +374,6 @@ $gradient_start : rgba(0, 193, 243, 0.8);
   }
 }
 
-
 /*contact block*/
 .contacts__block{
   width: 100%;
@@ -624,9 +624,118 @@ $gradient_start : rgba(0, 193, 243, 0.8);
 }
 
 /*response*/
-//@media () {
-//
-//}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .head__title>h1{
+    font-size: 40px !important;
+  }
+}
+@media (min-width: 425px) and (max-width: 767px){
+
+  .wrapper__form{
+    .form{
+      .send__message{
+        .form__group:nth-child(2){
+         margin-left: -10px !important;
+        }
+      }
+    }
+  }
+
+
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .choose__block{
+    .choose__block_wrapper{
+      .advantages__block{
+        .advantage__item{
+          width: 100% ;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .head__title h1{
+    font-size: 30px !important;
+    z-index: -99999 !important;
+  }
+  .slider__control{
+    z-index: 999 !important;
+  }
+  .head__title>p{ display: none;}
+  .nav__items{
+    display: none;
+
+  }
+  .send__message{
+    .form__group{
+      .form__text{
+        width: 100%!important;
+      }
+    }
+  }
+  .contacts__block {
+    .contact__wrapper {
+      .contact__form_block {
+        .wrapper__form {
+          .text__contact{
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .about__block{
+    .item__about-block{
+      .about_figure{
+        img{
+          height: inherit;
+        }
+      }
+    }
+  }
+  .wrapper__form{
+    width: 100% !important;
+    height: 100% !important;
+    flex-wrap: wrap !important;
+    .form{
+      .send__message{
+        .form__group:nth-child(2){
+          width: 420px;
+          max-width: 93%;
+          //margin-left: -10px !important;
+        }
+        .form__group{
+
+          .form__input{
+            width: 93% !important;
+          }
+        }
+      }
+    }
+
+    .form, .text__contact{
+      flex: 1 0 100%;
+    }
+  }
+  .contacts__block{
+    .main__footer{
+      height: 150px;
+      .footer__content{
+        .footer__text,
+        .social__network_items{
+          text-align: center;
+          margin: 1em auto;
+
+        }
+        .social__network_items{
+        }
+      }
+    }
+  }
+
+}
 
 
 

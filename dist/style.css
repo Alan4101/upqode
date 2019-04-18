@@ -893,3 +893,49 @@
             color: #7a3d52; }
 
 /*response*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .head__title > h1 {
+    font-size: 40px !important; } }
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .wrapper__form .form .send__message .form__group:nth-child(2) {
+    margin-left: -10px !important; } }
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .choose__block .choose__block_wrapper .advantages__block .advantage__item {
+    width: 100%; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .head__title h1 {
+    font-size: 30px !important;
+    z-index: -99999 !important; }
+  .slider__control {
+    z-index: 999 !important; }
+  .head__title > p {
+    display: none; }
+  .nav__items {
+    display: none; }
+  .send__message .form__group .form__text {
+    width: 100% !important; }
+  .contacts__block .contact__wrapper .contact__form_block .wrapper__form .text__contact {
+    margin: 0 auto;
+    text-align: center; }
+  .about__block .item__about-block .about_figure img {
+    height: inherit; }
+  .wrapper__form {
+    width: 100% !important;
+    height: 100% !important;
+    flex-wrap: wrap !important; }
+    .wrapper__form .form .send__message .form__group:nth-child(2) {
+      width: 420px;
+      max-width: 93%; }
+    .wrapper__form .form .send__message .form__group .form__input {
+      width: 93% !important; }
+    .wrapper__form .form, .wrapper__form .text__contact {
+      flex: 1 0 100%; }
+  .contacts__block .main__footer {
+    height: 150px; }
+    .contacts__block .main__footer .footer__content .footer__text,
+    .contacts__block .main__footer .footer__content .social__network_items {
+      text-align: center;
+      margin: 1em auto; } }
